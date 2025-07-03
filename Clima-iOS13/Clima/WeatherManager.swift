@@ -1,12 +1,7 @@
-//
-//  WeatherManager.swift
-//  Clima
-//
-//  Created by Snigdha Tiwari on 01/07/25.
-//  Copyright © 2025 App Brewery. All rights reserved.
-//
+
 
 import Foundation
+import CoreLocation
 
 protocol WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
@@ -22,6 +17,11 @@ struct WeatherManager{
     
     func fetchWeather(cityName: String){
         let urlString = "\(weatherURL)&q=\(cityName)"
+        print(urlString)
+        performRequest(urlString)
+    }
+    func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees){
+        let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
         print(urlString)
         performRequest(urlString)
     }

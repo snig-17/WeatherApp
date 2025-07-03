@@ -1,10 +1,4 @@
-//
-//  WeatherModel.swift
-//  Clima
-//
-//  Created by Snigdha Tiwari on 02/07/25.
-//  Copyright © 2025 App Brewery. All rights reserved.
-//
+
 
 import Foundation
 
